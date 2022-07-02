@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.arab.task.entity.Task;
@@ -17,12 +18,10 @@ public class TaskController {
 	@Autowired
 	TaskRepository repository;
 	
-	@RequestMapping("/tasks")
-//	public List<Task> getAllTask() 
-	public String getAllTask(){
-//		List<Task> allTask = repository.findAll();
-//		return allTask;
-		return "Hello Task";
+	@RequestMapping(value = "tasks", method = RequestMethod.GET)
+	public List<Task> getAllTask() {
+		List<Task> allTask = repository.findAll();
+		return allTask;
 	}
 
 }
