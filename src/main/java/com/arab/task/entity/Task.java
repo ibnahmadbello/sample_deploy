@@ -1,10 +1,12 @@
 package com.arab.task.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Entity
+@Entity()
 public class Task {
 	
+	@Id
 	private int id;
 	private String title;
 	private String description;
