@@ -13,6 +13,7 @@ import com.arab.task.repo.TaskRepository;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/")
 public class TaskController {
 	
 	@Autowired
