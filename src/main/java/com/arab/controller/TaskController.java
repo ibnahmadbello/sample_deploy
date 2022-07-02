@@ -18,9 +18,11 @@ public class TaskController {
 	TaskRepository repository;
 	
 	@RequestMapping("/tasks")
-	public List<Task> getAllTask() {
-		List<Task> allTask = repository.findAll();
-		return allTask;
+//	public List<Task> getAllTask() 
+	public String getAllTask(){
+//		List<Task> allTask = repository.findAll();
+//		return allTask;
+		return "Hello Task";
 	}
 
 }
