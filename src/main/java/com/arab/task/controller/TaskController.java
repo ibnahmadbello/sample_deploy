@@ -1,4 +1,4 @@
-package com.arab.controller;
+package com.arab.task.controller;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.arab.task.entity.Task;
 import com.arab.task.repo.TaskRepository;
 
-@Controller
+@RestController
 public class TaskController {
 	
 	@Autowired
